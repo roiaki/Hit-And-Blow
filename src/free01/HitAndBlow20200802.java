@@ -93,7 +93,6 @@ public class HitAndBlow20200802 {
 	}
 
 
-
 	// ˆêŒ…‚¸‚Â•ª‰ğ‚·‚é
 	for (int i = 3; i >= 0; i--) {
 	    inputNumber[i] = number % 10;
