@@ -16,8 +16,9 @@ public class HitAndBlow20200802 {
 	// 1.乱数を作成して
 	int[] rand = makeRandNumber();
 	System.out.println("4桁の乱数は" + rand[0] + rand[1] + rand[2] + rand[3]);
-	    
-	while (true) { 
+
+	// 正解するまで入力する
+	while (true) {
 	    // 2.入力して
 	    int[] input = inputNumber();
 	    // 3 判定する。正解したら終了。
@@ -27,10 +28,12 @@ public class HitAndBlow20200802 {
 	}
     }
 
+
     /*
-     * random number creation method 4桁の乱数生成メソッド 作成する乱数は先頭が0ではない、重複しない。
+     * random number creation method 4桁の乱数生成メソッド （乱数は先頭が0ではない、重複しない）
      * @return int[] rand 生成した乱数を配列に格納したもの
      */
+    // TODO:乱数の作成を他のやり方で
     public static int[] makeRandNumber() {
 
 	int[] rand = new int[4];
@@ -41,9 +44,9 @@ public class HitAndBlow20200802 {
 		rand[i] = (int) (Math.random() * 10);
 		System.out.println(rand[i]);
 	    }
-	    
+
 	    if (rand[0] != 0) {
-		
+
 		if (duplicationCheck(rand)) {
 		    break;
 		}
@@ -83,6 +86,7 @@ public class HitAndBlow20200802 {
 	int[] inputNumber = new int[4];
 
 	int number = 0;
+	// TODO 他の例外処理
 	try {
 
 	    number = sc.nextInt();
