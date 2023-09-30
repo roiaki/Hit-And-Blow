@@ -6,22 +6,22 @@ import java.util.Scanner;
 public class HitAndBlow20200802 {
 
     /*
-     * specification d—l
+     * specification ä»•æ§˜
      * 1.create non-overlapping random number.
      * 2.User input anumber.
      * 3.Judge hit and blow
      */
     public static void main(String[] args) {
 
-	// 1.—”‚ğì¬‚µ‚Ä
+	// 1.ä¹±æ•°ã‚’ä½œæˆã—ã¦
 	int[] rand = makeRandNumber();
-	System.out.println("4Œ…‚Ì—”‚Í" + rand[0] + rand[1] + rand[2] + rand[3]);
+	System.out.println("4æ¡ã®ä¹±æ•°ã¯" + rand[0] + rand[1] + rand[2] + rand[3]);
 
-	// ³‰ğ‚·‚é‚Ü‚Å“ü—Í‚·‚é
+	// æ­£è§£ã™ã‚‹ã¾ã§å…¥åŠ›ã™ã‚‹
 	while (true) {
-	    // 2.“ü—Í‚µ‚Ä
+	    // 2.å…¥åŠ›ã—ã¦
 	    int[] input = inputNumber();
-	    // 3 ”»’è‚·‚éB³‰ğ‚µ‚½‚çI—¹B
+	    // 3 åˆ¤å®šã™ã‚‹ã€‚æ­£è§£ã—ãŸã‚‰çµ‚äº†ã€‚
 	    if (judgement(input, rand)) {
 		break;
 	    }
@@ -30,10 +30,10 @@ public class HitAndBlow20200802 {
 
 
     /*
-     * random number creation method 4Œ…‚Ì—”¶¬ƒƒ\ƒbƒh i—”‚Íæ“ª‚ª0‚Å‚Í‚È‚¢Ad•¡‚µ‚È‚¢j
-     * @return int[] rand ¶¬‚µ‚½—”‚ğ”z—ñ‚ÉŠi”[‚µ‚½‚à‚Ì
+     * random number creation method 4æ¡ã®ä¹±æ•°ç”Ÿæˆãƒ¡ã‚½ãƒƒãƒ‰ ï¼ˆä¹±æ•°ã¯å…ˆé ­ãŒ0ã§ã¯ãªã„ã€é‡è¤‡ã—ãªã„ï¼‰
+     * @return int[] rand ç”Ÿæˆã—ãŸä¹±æ•°ã‚’é…åˆ—ã«æ ¼ç´ã—ãŸã‚‚ã®
      */
-    // TODO:—”‚Ìì¬‚ğ‘¼‚Ì‚â‚è•û‚Å
+    // TODO:ä¹±æ•°ã®ä½œæˆã‚’ä»–ã®ã‚„ã‚Šæ–¹ã§
     public static int[] makeRandNumber() {
 
 	int[] rand = new int[4];
@@ -57,9 +57,9 @@ public class HitAndBlow20200802 {
     }
 
     /*
-     * Check for duplication method ¶¬‚µ‚½—”‚ªd•¡‚µ‚Ä‚¢‚é‚©”»’è‚µ‚Ü‚·B
-     * @param int[] intArray ¶¬‚µ‚½—”
-     * @retrun boolean duplicatedFlag —”‚ªd•¡‚µ‚Ä‚½‚çfalse,‚»‚¤‚Å‚È‚©‚Á‚½‚çtrue.
+     * Check for duplication method ç”Ÿæˆã—ãŸä¹±æ•°ãŒé‡è¤‡ã—ã¦ã„ã‚‹ã‹åˆ¤å®šã—ã¾ã™ã€‚
+     * @param int[] intArray ç”Ÿæˆã—ãŸä¹±æ•°
+     * @retrun boolean duplicatedFlag ä¹±æ•°ãŒé‡è¤‡ã—ã¦ãŸã‚‰false,ãã†ã§ãªã‹ã£ãŸã‚‰true.
      */
     public static boolean duplicationCheck(int[] intArray) {
 
@@ -77,27 +77,27 @@ public class HitAndBlow20200802 {
     }
 
     /*
-     * Number input method ®”“ü—Íƒƒ\ƒbƒh
-     * @param ‚È‚µ
-     * @return int[] inputNumber “ü—Í‚³‚ê‚½®”
+     * Number input method æ•´æ•°å…¥åŠ›ãƒ¡ã‚½ãƒƒãƒ‰
+     * @param ãªã—
+     * @return int[] inputNumber å…¥åŠ›ã•ã‚ŒãŸæ•´æ•°
      */
     public static int[] inputNumber() {
 	Scanner sc = new Scanner(System.in);
 	int[] inputNumber = new int[4];
 
 	int number = 0;
-	// TODO ‘¼‚Ì—áŠOˆ—
+	// TODO ä»–ã®ä¾‹å¤–å‡¦ç†
 	try {
 
 	    number = sc.nextInt();
 
 	} catch(InputMismatchException e) {
 
-	   System.out.println("®”‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+	   System.out.println("æ•´æ•°ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„");
 	}
 
 
-	// ˆêŒ…‚¸‚Â•ª‰ğ‚·‚é
+	// ä¸€æ¡ãšã¤åˆ†è§£ã™ã‚‹
 	for (int i = 3; i >= 0; i--) {
 	    inputNumber[i] = number % 10;
 	    number = number / 10;
@@ -108,10 +108,10 @@ public class HitAndBlow20200802 {
     }
 
     /*
-     * Judgement method ”»’èƒƒ\ƒbƒh “ü—Í‚³‚ê‚½®”‚Æ¶¬‚³‚ê‚½—”‚ğ”äŠr‚µ‚ÄA”»’è‚µ‚Ü‚·B
-     * @param int[] inputNum “ü—Í‚³‚ê‚½®”,
-     * @param int[] randNum ¶¬‚µ‚½—”
-     * @return boolean correctFlag ³‰ğ‚µ‚½‚çtrue,‚»‚¤‚Å‚È‚©‚Á‚½‚çfalse
+     * Judgement method åˆ¤å®šãƒ¡ã‚½ãƒƒãƒ‰ å…¥åŠ›ã•ã‚ŒãŸæ•´æ•°ã¨ç”Ÿæˆã•ã‚ŒãŸä¹±æ•°ã‚’æ¯”è¼ƒã—ã¦ã€åˆ¤å®šã—ã¾ã™ã€‚
+     * @param int[] inputNum å…¥åŠ›ã•ã‚ŒãŸæ•´æ•°,
+     * @param int[] randNum ç”Ÿæˆã—ãŸä¹±æ•°
+     * @return boolean correctFlag æ­£è§£ã—ãŸã‚‰true,ãã†ã§ãªã‹ã£ãŸã‚‰false
      */
     public static boolean judgement(int[] inputNum, int[] randNum) {
 	int BlowCnt = 0, HitCnt = 0;
@@ -131,7 +131,7 @@ public class HitAndBlow20200802 {
 	}
 	System.out.println(HitCnt + "Hit " + (BlowCnt - HitCnt) + "Blow");
 	if (HitCnt == 4) {
-	    System.out.println("³‰ğ‚Å‚·B");
+	    System.out.println("æ­£è§£ã§ã™ã€‚");
 	    correctFlag = true;
 	} else {
 	    correctFlag = false;
