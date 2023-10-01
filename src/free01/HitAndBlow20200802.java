@@ -12,20 +12,18 @@ public class HitAndBlow20200802 {
      * 3.Judge hit and blow
      */
     public static void main(String[] args) {
-
-	// 1.乱数を作成して
-	int[] rand = makeRandNumber();
-	System.out.println("4桁の乱数は" + rand[0] + rand[1] + rand[2] + rand[3]);
-
-	// 正解するまで入力する
-	while (true) {
-	    // 2.入力して
-	    int[] input = inputNumber();
-	    // 3 判定する。正解したら終了。
-	    if (judgement(input, rand)) {
-		break;
-	    }
-	}
+        // 1.乱数を作成して
+        int[] rand = makeRandNumber();
+        System.out.println("4桁の乱数は" + rand[0] + rand[1] + rand[2] + rand[3]);
+        // 正解するまで入力する
+        while (true) {
+            // 2.入力して
+            int[] input = inputNumber();
+            // 3 判定する。正解したら終了。
+            if (judgement(input, rand)) {
+                break;
+            }
+        }
     }
     /*
      * random number creation method 4桁の乱数生成メソッド （乱数は先頭が0ではない、重複しない）
@@ -93,6 +91,7 @@ public class HitAndBlow20200802 {
 	    System.out.println("inputNumber : " + i + " " + inputNumber[i]);
 	}
 	return inputNumber;
+
     }
 
     /*
@@ -109,7 +108,7 @@ public class HitAndBlow20200802 {
 	    for (int j = 0; j < inputNum.length; j++) {
 		if (inputNum[i] == randNum[j]) {
 		    BlowCnt++;
-		}
+	        }
 	    }
 	}
 	for (int i = 0; i < inputNum.length; i++) {
@@ -118,7 +117,7 @@ public class HitAndBlow20200802 {
 	    }
 	}
 	System.out.println(HitCnt + "Hit " + (BlowCnt - HitCnt) + "Blow");
-	if (HitCnt == 4) {
+        if (HitCnt == 4) {
 	    System.out.println("正解です。");
 	    correctFlag = true;
 	} else {
