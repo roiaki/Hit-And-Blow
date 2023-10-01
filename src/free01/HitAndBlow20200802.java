@@ -31,20 +31,20 @@ public class HitAndBlow20200802 {
      */
     // TODO:—”‚Ìì¬‚ğ‘¼‚Ì‚â‚è•û‚Å
     public static int[] makeRandNumber() {
-	int[] rand = new int[4];
-	while (true) {
-	    for (int i = 0; i < 4; i++) {
-		rand[i] = (int) (Math.random() * 10);
-		System.out.println(rand[i]);
-	    }
-	    if (rand[0] != 0) {
-		if (duplicationCheck(rand)) {
-		    break;
-		}
-	    }
-	}
-	//System.out.println(Arrays.toString(rand));
-	return rand;
+        int[] rand = new int[4];
+        while (true) {
+            for (int i = 0; i < 4; i++) {
+                rand[i] = (int) (Math.random() * 10);
+                System.out.println(rand[i]);
+            }
+            if (rand[0] != 0) {
+                if (duplicationCheck(rand)) {
+                    break;
+                }
+            }
+        }
+        //System.out.println(Arrays.toString(rand));
+        return rand;
     }
 
     /*
@@ -53,18 +53,17 @@ public class HitAndBlow20200802 {
      * @retrun boolean duplicatedFlag —”‚ªd•¡‚µ‚Ä‚½‚çfalse,‚»‚¤‚Å‚È‚©‚Á‚½‚çtrue.
      */
     public static boolean duplicationCheck(int[] intArray) {
+        boolean isDupulicated = true;
 
-	boolean isDupulicated = true;
-
-	// if randNumber is not dupulicated, break.
-	for (int i = 0; i < intArray.length; i++) {
-	    for (int j = 0; j < i; j++) {
-		if (intArray[i] == intArray[j]) {
-		    isDupulicated = false;
-		}
-	    }
-	}
-	return isDupulicated;
+        // if randNumber is not dupulicated, break.
+        for (int i = 0; i < intArray.length; i++) {
+            for (int j = 0; j < i; j++) {
+                if (intArray[i] == intArray[j]) {
+                    isDupulicated = false;
+                }
+            }
+        }
+        return isDupulicated;
     }
 
     /*
@@ -73,7 +72,7 @@ public class HitAndBlow20200802 {
      * @return int[] inputNumber “ü—Í‚³‚ê‚½®”
      */
     public static int[] inputNumber() {
-	Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 	int[] inputNumber = new int[4];
 
 	int number = 0;
@@ -101,28 +100,28 @@ public class HitAndBlow20200802 {
      * @return boolean correctFlag ³‰ğ‚µ‚½‚çtrue,‚»‚¤‚Å‚È‚©‚Á‚½‚çfalse
      */
     public static boolean judgement(int[] inputNum, int[] randNum) {
-	int BlowCnt = 0, HitCnt = 0;
-	boolean correctFlag;
+        int BlowCnt = 0, HitCnt = 0;
+        boolean correctFlag;
 
-	for (int i = 0; i < inputNum.length; i++) {
-	    for (int j = 0; j < inputNum.length; j++) {
-		if (inputNum[i] == randNum[j]) {
-		    BlowCnt++;
-	        }
-	    }
-	}
-	for (int i = 0; i < inputNum.length; i++) {
-	    if (inputNum[i] == randNum[i]) {
-		HitCnt++;
-	    }
-	}
-	System.out.println(HitCnt + "Hit " + (BlowCnt - HitCnt) + "Blow");
+        for (int i = 0; i < inputNum.length; i++) {
+            for (int j = 0; j < inputNum.length; j++) {
+        	if (inputNum[i] == randNum[j]) {
+        	    BlowCnt++;
+        	}
+            }
+        }
+        for (int i = 0; i < inputNum.length; i++) {
+            if (inputNum[i] == randNum[i]) {
+        	HitCnt++;
+            }
+        }
+        System.out.println(HitCnt + "Hit " + (BlowCnt - HitCnt) + "Blow");
         if (HitCnt == 4) {
-	    System.out.println("³‰ğ‚Å‚·B");
-	    correctFlag = true;
-	} else {
-	    correctFlag = false;
-	}
-	return correctFlag;
+            System.out.println("³‰ğ‚Å‚·B");
+            correctFlag = true;
+        } else {
+            correctFlag = false;
+        }
+        return correctFlag;
     }
 }
