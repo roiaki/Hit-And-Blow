@@ -73,23 +73,23 @@ public class HitAndBlow20200802 {
      */
     public static int[] inputNumber() {
         Scanner sc = new Scanner(System.in);
-	int[] inputNumber = new int[4];
+        int[] inputNumber = new int[4];
 
-	int number = 0;
-	// TODO ‘¼‚Ì—áŠOˆ—
-	try {
-	    number = sc.nextInt();
-	} catch(InputMismatchException e) {
-	   System.out.println("®”‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
-	}
+        int number = 0;
+        // TODO ‘¼‚Ì—áŠOˆ—
+        try {
+            number = sc.nextInt();
+        } catch(InputMismatchException e) {
+            System.out.println("®”‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+        }
 
-	// ˆêŒ…‚¸‚Â•ª‰ğ‚·‚é
-	for (int i = 3; i >= 0; i--) {
-	    inputNumber[i] = number % 10;
-	    number = number / 10;
-	    System.out.println("inputNumber : " + i + " " + inputNumber[i]);
-	}
-	return inputNumber;
+        // ˆêŒ…‚¸‚Â•ª‰ğ‚·‚é
+        for (int i = 3; i >= 0; i--) {
+            inputNumber[i] = number % 10;
+            number = number / 10;
+            System.out.println("inputNumber : " + i + " " + inputNumber[i]);
+        }
+        return inputNumber;
 
     }
 
