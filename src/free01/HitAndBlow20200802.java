@@ -91,7 +91,6 @@ public class HitAndBlow20200802 {
             System.out.println("inputNumber : " + i + " " + inputNumber[i]);
         }
         return inputNumber;
-
     }
 
     /*
