@@ -27,25 +27,19 @@ public class HitAndBlow20200802 {
 	    }
 	}
     }
-
     /*
      * random number creation method 4桁の乱数生成メソッド （乱数は先頭が0ではない、重複しない）
      * @return int[] rand 生成した乱数を配列に格納したもの
      */
     // TODO:乱数の作成を他のやり方で
     public static int[] makeRandNumber() {
-
 	int[] rand = new int[4];
-
 	while (true) {
-
 	    for (int i = 0; i < 4; i++) {
 		rand[i] = (int) (Math.random() * 10);
 		System.out.println(rand[i]);
 	    }
-
 	    if (rand[0] != 0) {
-
 		if (duplicationCheck(rand)) {
 		    break;
 		}
@@ -87,14 +81,10 @@ public class HitAndBlow20200802 {
 	int number = 0;
 	// TODO 他の例外処理
 	try {
-
 	    number = sc.nextInt();
-
 	} catch(InputMismatchException e) {
-
 	   System.out.println("整数を入力してください");
 	}
-
 
 	// 一桁ずつ分解する
 	for (int i = 3; i >= 0; i--) {
@@ -103,7 +93,6 @@ public class HitAndBlow20200802 {
 	    System.out.println("inputNumber : " + i + " " + inputNumber[i]);
 	}
 	return inputNumber;
-
     }
 
     /*
