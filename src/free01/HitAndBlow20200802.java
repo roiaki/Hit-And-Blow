@@ -25,6 +25,7 @@ public class HitAndBlow20200802 {
             }
         }
     }
+
     /*
      * random number creation method 4桁の乱数生成メソッド （乱数は先頭が0ではない、重複しない）
      * @return int[] rand 生成した乱数を配列に格納したもの
@@ -105,14 +106,14 @@ public class HitAndBlow20200802 {
 
         for (int i = 0; i < inputNum.length; i++) {
             for (int j = 0; j < inputNum.length; j++) {
-        	if (inputNum[i] == randNum[j]) {
-        	    BlowCnt++;
-        	}
+                if (inputNum[i] == randNum[j]) {
+                    BlowCnt++;
+                }
             }
         }
         for (int i = 0; i < inputNum.length; i++) {
             if (inputNum[i] == randNum[i]) {
-        	HitCnt++;
+                HitCnt++;
             }
         }
         System.out.println(HitCnt + "Hit " + (BlowCnt - HitCnt) + "Blow");
