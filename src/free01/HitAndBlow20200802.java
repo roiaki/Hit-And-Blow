@@ -28,7 +28,6 @@ public class HitAndBlow20200802 {
 	}
     }
 
-
     /*
      * random number creation method 4桁の乱数生成メソッド （乱数は先頭が0ではない、重複しない）
      * @return int[] rand 生成した乱数を配列に格納したもの
